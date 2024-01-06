@@ -6,7 +6,7 @@
 /*   By: omakran <omakran@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/06 00:31:53 by omakran           #+#    #+#             */
-/*   Updated: 2024/01/06 22:15:01 by omakran          ###   ########.fr       */
+/*   Updated: 2024/01/06 22:32:11 by omakran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,7 @@ class   User
     std::string First_Name;
     std::string Last_Name;
     int         Age;
+    User () {}
     User(std::string F_Name, std::string L_name, int age)
     {
         First_Name = F_Name;
@@ -82,6 +83,9 @@ int main()
 
     // Parametrized Constructor.
     User    user_1("Omar", "Makran", 25);
+    // Handlitha b Own constractur: 'User () {}', hit default constractur t7yd fash jit drt constructor dyali.
+    User    omakran;
+    
     GetUserInfo(user_1);
     std::cout << "heello\n";
     delete data_1;
