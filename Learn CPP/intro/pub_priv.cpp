@@ -6,7 +6,7 @@
 /*   By: omakran <omakran@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/05 18:19:38 by omakran           #+#    #+#             */
-/*   Updated: 2024/01/05 18:39:33 by omakran          ###   ########.fr       */
+/*   Updated: 2024/01/06 17:16:09 by omakran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 #include <string>
 
 // public: hwa wahd  Access Specifier ki allowi tkhdm b members likaynin f Class.
-// privet: Ta hwa wahd Access Specifier makikhlikch tkhdm bchi member tkhdm beh braat l class, kiproetectiha ohad lqadiya katsma b 'encapsulation'
+// protected: tqrinan bhal private, momkin tkhdm b dak variable li mprotecti f dakhl class o momkin tkhdm beh f inherit class.
+// private: Ta hwa wahd Access Specifier makikhlikch tkhdm bchi member tkhdm beh braat l class, kiproetectiha ohad lqadiya katsma b 'encapsulation'
 class data
 {
     public:
