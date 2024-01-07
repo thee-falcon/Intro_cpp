@@ -6,7 +6,7 @@
 /*   By: omakran <omakran@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/06 22:36:19 by omakran           #+#    #+#             */
-/*   Updated: 2024/01/06 23:38:22 by omakran          ###   ########.fr       */
+/*   Updated: 2024/01/07 20:00:59 by omakran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,29 +29,34 @@ class Lhala_Lmadaniya
     // Constructor.
     Lhala_Lmadaniya (std::string smiya, std::string lkniya, int tarikh)
     {
-        Smiya = smiya;
-        Lkniya = lkniya;
-        Counter_Tartib_lwilada = 1;
+        Smiya = smiya; // Omar
+        Lkniya = lkniya; // Makran
+        Counter_Tartib_lwilada = 1; 
+        // alocation
         Tartib_lwilada = new float[Counter_Tartib_lwilada];
+        // Fill the array
         Tartib_lwilada[0] = 1;
-        Tartib_lwilada[1] = 0;
-        Tarikh_Lizdiyad = tarikh;
+        Tarikh_Lizdiyad = tarikh; // 25
     }
     // Destructor.
-    ~Lhala_Lmadaniya()
+    ~Lhala_Lmadaniya() 
     {
         delete []Tartib_lwilada;
         Tartib_lwilada = nullptr;
     }
     
     // Copy Constructor.
-    Lhala_Lmadaniya(Lhala_Lmadaniya &Orikhinal)
+    Lhala_Lmadaniya(const Lhala_Lmadaniya &Original)
     {
-        Smiya = Orikhinal.Smiya;
-        Lkniya = Orikhinal.Lkniya;
-        Counter_Tartib_lwilada = Orikhinal.Counter_Tartib_lwilada;
-        Tartib_lwilada = Orikhinal.Tartib_lwilada;
-        Tarikh_Lizdiyad = Orikhinal.Tarikh_Lizdiyad;
+        Smiya = Original.Smiya;
+        Lkniya = Original.Lkniya;
+        Counter_Tartib_lwilada = Original.Counter_Tartib_lwilada;
+        Tarikh_Lizdiyad = Original.Tarikh_Lizdiyad;
+        // New allocation for the Copy Constructor.
+        Tartib_lwilada = new float[Counter_Tartib_lwilada];
+        // Copy the data of the Original constructor to 'Copy Constructor'.
+        for (int i = 0; i < Counter_Tartib_lwilada; i++)
+            Tartib_lwilada[i] = Original.Tartib_lwilada[i];
     }
 };
 
