@@ -6,7 +6,7 @@
 /*   By: omakran <omakran@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/06 22:36:19 by omakran           #+#    #+#             */
-/*   Updated: 2024/01/07 20:00:59 by omakran          ###   ########.fr       */
+/*   Updated: 2024/01/07 22:07:47 by omakran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 // Okankhdmo beh f Public Access Specifier, kit3yt lih fach kanpasiw dak object ka Value.
 // O ma k returni tashi data type, O kitsma b nafs smiya dyal Class.
 // O kiyakhd lina Parameter Wahd odak Paremter kiyakhd naafs smiya dyal Class.
+// WARNNING ===> Copy constrcutor ayt3yt leh fi halat ila passiti object ka value mashi ka reference, ola treturni object ka value.
+//  
 
 class Lhala_Lmadaniya
 {
@@ -60,12 +62,33 @@ class Lhala_Lmadaniya
     }
 };
 
+void    PrintData(Lhala_Lmadaniya lmadaniya)
+{
+    float   sum = 0;
+
+    std::cout << "Smiya: " << lmadaniya.Smiya << std::endl;
+    std::cout << "Lkniya: " << lmadaniya.Lkniya << std::endl;
+    for (int i = 0; i < lmadaniya.Counter_Tartib_lwilada; i++)
+        sum += lmadaniya.Tartib_lwilada[i];
+    std::cout << "Avrage lwilada: " << sum / lmadaniya.Counter_Tartib_lwilada << std::endl;
+    std::cout << std::endl;
+}
+
 int main()
 {
     Lhala_Lmadaniya dyal_omar("Omar", "Makran", 25);
     Lhala_Lmadaniya dyal_amine("Amine", "Mammazal", 22);
     Lhala_Lmadaniya dyal_rida("Rida", "Rouali", 22);
+    // The copy constructor is invoked.
+    Lhala_Lmadaniya dyal_1337(dyal_omar); // You can declare it also like this:
+                                          // Lhala_Lmadaniya dyal_1337 = dyal_omar;
+    // Assignment Operator '='
+    // dyal_1337 = dyal_amine;
     
-    Lhala_Lmadaniya dyal_1337(dyal_omar);
+    // The copy constructor will be invoked in this line.
+    PrintData(dyal_omar);
+    PrintData(dyal_amine);
+    PrintData(dyal_rida);
+    PrintData(dyal_1337); // The same data in the Copy Constructor 'dyal_omar', it pass it in the New Copy Constructor 'dyal_1337'.
     return (0);
 }
