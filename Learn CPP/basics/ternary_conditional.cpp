@@ -6,12 +6,12 @@
 /*   By: omakran <omakran@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 00:42:36 by omakran           #+#    #+#             */
-/*   Updated: 2024/01/09 01:06:12 by omakran          ###   ########.fr       */
+/*   Updated: 2024/01/09 17:00:32 by omakran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-#include <cstdlib>
+#include <cstdlib> // For system() Function.
 
                 // Build a Guessing check App usig Ternary Conditional.
 // system(): Kayna f part dyal <cstdlib> Header, katakhdm dak argument okatpresentih ka command okatpassih l command processor ola shell, bhal ila katkb chi command f Terminal.
