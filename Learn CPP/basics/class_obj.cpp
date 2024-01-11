@@ -1,4 +1,4 @@
-/* ************************************************************************** */
+ /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   class_obj.cpp                                      :+:      :+:    :+:   */
@@ -12,14 +12,26 @@
 
 #include <iostream>
 #include <string>
+#include <list>
+
+// Class: User define data type.
+// public: Access Modifier.
+// list: a doubly-linked list container,  it stores elements in a linear order, Unlike arrays;
 
 class omakran 
 {
     // drna 'public' bash ykon endna Access nkhdmo b memebers ola functions likaynin dakhl dyal Class.
-    // ila hydna 'public' ghaykon by default 'privet', omaghaykonch 3ndna Access bash nkdhmo beh bra dyal Class.
+    // ila hydna 'public' ghaykon by default 'pravet', omaghaykonch 3ndna Access bash nkdhmo beh bra dyal Class.
     public: 
     std::string omakran_name;
-    void    print_name() {std::cout << "The name is: " << omakran_name << std::endl;}
+    int age;
+    // list of strings;
+    std::list<std::string> Brothers;
+    // function in the class;
+    void    print_name()
+    {
+        std::cout << "The name is: " << omakran_name << std::endl;
+    }
 };
 
 int main()
@@ -29,5 +41,13 @@ int main()
 
     obj.omakran_name = "Omar Makran";
     obj.print_name();
+    obj.age = 24;
+    std::cout << obj.age << std::endl;
+    obj.Brothers = {"Amine", "Rida", "Anouar"};
+    std::cout << "Likhwan" << std::endl;
+    for (const std::string likhwan : obj.Brothers)
+    {
+        std::cout << likhwan << std::endl;
+    }
     return (0);
 }
