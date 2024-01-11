@@ -6,13 +6,13 @@
 /*   By: omakran <omakran@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 12:28:43 by omakran           #+#    #+#             */
-/*   Updated: 2024/01/11 12:36:23 by omakran          ###   ########.fr       */
+/*   Updated: 2024/01/11 12:38:19 by omakran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 
-// void pointers using switch case;
+//  void pointers using switch case;
 
 void    print(void* ptr, char type)
 {
