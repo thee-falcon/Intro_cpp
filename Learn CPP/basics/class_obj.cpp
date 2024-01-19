@@ -46,8 +46,6 @@ int main()
     obj.Brothers = {"Amine", "Rida", "Anouar"};
     std::cout << "Likhwan" << std::endl;
     for (const std::string likhwan : obj.Brothers)
-    {
         std::cout << likhwan << std::endl;
-    }
     return (0);
 }
