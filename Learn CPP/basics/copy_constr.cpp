@@ -6,7 +6,7 @@
 /*   By: omakran <omakran@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/06 22:36:19 by omakran           #+#    #+#             */
-/*   Updated: 2024/01/07 22:16:56 by omakran          ###   ########.fr       */
+/*   Updated: 2024/02/04 18:32:54 by omakran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,6 @@
 // Okankhdmo beh f Public Access Specifier, kit3yt lih fach kanpasiw dak object ka Value.
 // O ma k returni tashi data type, O kitsma b nafs smiya dyal Class.
 // O kiyakhd lina Parameter Wahd odak Paremter kiyakhd naafs smiya dyal Class.
-// WARNNING ===> Copy constrcutor ayt3yt leh fi halat ila passiti object ka value mashi ka reference, ola treturni object ka value.
-//  Hit ila declarina object ka reference farah ila tbdlat chi haja fdakhl dik function, ghadi tsdq mbdla lina fta original, so dakshi elash kit3yt leh mni kanpassiw leh ka value, fhad lhala kitcrea wahd copy dyal dak object so wakha ga3 tra chi haja fdik fucntion,
-// Maghadich itbdl lina f Original.
 
 class Lhala_Lmadaniya
 {
