@@ -6,7 +6,7 @@
 /*   By: omakran <omakran@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/04 15:56:37 by omakran           #+#    #+#             */
-/*   Updated: 2024/02/04 16:20:41 by omakran          ###   ########.fr       */
+/*   Updated: 2024/02/04 17:58:37 by omakran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,57 @@ public:
         return (res);
     }
     void print() { std::cout << real << " + i" << image << std::endl; }
+};
+
+// Comparison Operators: You can overload comparison operators (==, !=, <, >, <=, >=) to define custom comparisons for your objects.
+class Point
+{
+public:
+    int x, y;
+
+    bool operator==(const Point& other) const
+    {
+        return (x == other.x) && (y == other.y);
+    }
+};
+
+//Overloading unary operators like ++, --, -, !, etc., for your class objects.
+
+class Counter
+{
+private:
+    int count;
+
+public:
+    Counter operator++()
+    {
+        // Increment the count and return the updated object
+        ++count;
+        return *this;
+    }
+};
+
+// Subscript Operator ([]): You can overload the [] operator to provide array-like access to objects of your class.
+class Matrix
+{
+private:
+    int data[3][3];
+
+public:
+    int operator()(int row, int col) const
+    {
+        return data[row][col];
+    }
+};
+
+//Function Call Operator (()): You can overload the () operator to make objects of your class callable like functions.
+class Functor
+{
+public:
+    int operator()(int x, int y) const
+    {
+        return x + y;
+    }
 };
 
 int main()
