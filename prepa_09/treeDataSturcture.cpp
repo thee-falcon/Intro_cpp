@@ -6,7 +6,7 @@
 /*   By: omakran <omakran@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/26 10:56:54 by omakran           #+#    #+#             */
-/*   Updated: 2024/07/26 11:50:35 by omakran          ###   ########.fr       */
+/*   Updated: 2024/07/26 13:24:11 by omakran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,6 +66,32 @@ Node* creationNode(int data) {
   return newNode;
 }
 
+// preorder: algorithm (data, left, right).
+void  printPreorderTree(Node* root) {
+  if (root == NULL) return ;
+  
+  std::cout << root->data << std::endl;
+  printPreorderTree(root->left);
+  printPreorderTree(root->right); 
+}
+
+// inroder: algortithm (left, data, right)
+void  printInroderTree(Node* root) {
+  if (root == NULL) return;
+
+  printInroderTree(root->left);
+  std::cout << root->data << std::endl;
+  printInroderTree(root->right);
+}
+
+// postorder: algorithm (left, right, data)
+void  printPostorderTree(Node* root) {
+  if (root == NULL) return;
+
+  printPostorderTree(root->left);
+  printPostorderTree(root->right);
+  std::cout << root->data << std::endl;
+}
 
 int main() {
   // Level 1:
@@ -81,6 +107,14 @@ int main() {
   // Level 4:
   root->left->right->right = creationNode(9);
   root->right->right->left = creationNode(15);
+  
+  // preorder:
+  printPreorderTree(root);
+  std::cout << "'\n=========================" << std::endl;
+  printInroderTree(root);
+  std::cout << "'\n=========================" << std::endl;
+  printPostorderTree(root);
+  
   
   return 0;
 }
